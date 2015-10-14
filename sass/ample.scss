@@ -1,8 +1,17 @@
-@import 'components/font';
+/* Mixins */
+@import 'components/mixins';
+
+/* Normalize */
 @import 'components/normalize';
 
-$font-roboto: Roboto, sans-serif;
+/* Variables */
+@import 'components/variables';
 
-body {
-  font-family: $font-roboto;
-}
+/* Typography */
+@import 'components/typography';
+
+/* Components */
+@import 'components/buttons';
+@import 'components/font';
+@import 'components/grid';
+@import 'components/icons';

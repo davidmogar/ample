@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+
+  @media #{$small-devices} {
+    width: $container-small;
+  }
+  @media #{$medium-devices} {
+    width: $container-medium;
+  }
+  @media #{$large-devices} {
+    width: $container-large;
+  }
+}

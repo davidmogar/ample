@@ -1,0 +1,41 @@
+@mixin button-variant($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+
+  &:hover {
+    background-color: darken($background-color, 5%);
+  }
+
+  & .icon {
+    color: $color;
+    margin-right: 0.5em;
+  }
+}
+
+.btn {
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0.3em 0.5em;
+  text-align: center;
+  text-decoration:none;
+}
+
+.btn-error {
+  @include button-variant($color-white, $color-red);
+}
+
+.btn-default {
+  @include button-variant($color-black, $color-gray);
+}
+
+.btn-primary {
+  @include button-variant($color-white, $color-blue);
+}
+
+.btn-success {
+  @include button-variant($color-white, $color-green);
+}
+
+.btn-warning {
+  @include button-variant($color-white, $color-orange);
+}
