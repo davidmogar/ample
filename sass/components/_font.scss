@@ -1,22 +1,22 @@
 
 
 @font-face {
-  font-family: $font-lato;
+  font-family: $font-raleway;
   font-style: normal;
   font-weight: 300;
-  src: url($font-lato-light-path) format('truetype');
+  src: url($font-raleway-light-path) format('truetype');
 }
 
 @font-face {
-  font-family: $font-lato;
+  font-family: $font-raleway;
   font-style: normal;
   font-weight: 400;
-  src: url($font-lato-regular-path) format('truetype');
+  src: url($font-raleway-regular-path) format('truetype');
 }
 
 @font-face {
-  font-family: $font-lato;
+  font-family: $font-raleway;
   font-style: normal;
   font-weight: 700;
-  src: url($font-lato-bold-path) format('truetype');
+  src: url($font-raleway-bold-path) format('truetype');
 }

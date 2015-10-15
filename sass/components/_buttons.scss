@@ -13,29 +13,24 @@
 }
 
 .btn {
+  border: none;
   border-radius: 2px;
   cursor: pointer;
+  display: inline-block;
+  line-height: $button-line-height;
+  margin: $button-margin;
+  outline: none;
   padding: 0.3em 0.5em;
   text-align: center;
   text-decoration:none;
-}
+  vertical-align: middle;
+  white-space: nowrap;
 
-.btn-error {
-  @include button-variant($color-white, $color-red);
-}
-
-.btn-default {
   @include button-variant($color-black, $color-gray);
+
+  -webkit-tap-highlight-color: transparent;
 }
 
-.btn-primary {
+.btn.primary {
   @include button-variant($color-white, $color-blue);
-}
-
-.btn-success {
-  @include button-variant($color-white, $color-green);
-}
-
-.btn-warning {
-  @include button-variant($color-white, $color-orange);
 }

@@ -1,17 +1,18 @@
+/* Buttons */
+$button-line-height: 1.1rem;
+$button-margin: 0.2em 0;
+
 /* Colors */
 $color-black: #333;
 $color-blue: #2979ff;
 $color-gray: #e6e6e6;
-$color-green: #4caf50;
-$color-orange: #ff9800;
-$color-red: #f44336;
 $color-white: #fff;
 
 /* Fonts */
-$font-lato: "Lato";
-$font-lato-light-path: "../fonts/lato/lato-light.ttf";
-$font-lato-regular-path: "../fonts/lato/lato-regular.ttf";
-$font-lato-bold-path: "../fonts/lato/lato-bold.ttf";
+$font-raleway: "Raleway";
+$font-raleway-light-path: "../fonts/raleway/raleway-light.ttf";
+$font-raleway-regular-path: "../fonts/raleway/raleway-regular.ttf";
+$font-raleway-bold-path: "../fonts/raleway/raleway-bold.ttf";
 $font-icomoon-path: "../fonts/icomoon.ttf";
 
 /* Grid */
