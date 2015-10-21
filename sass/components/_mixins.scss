@@ -1,8 +1,0 @@
-@mixin font-feature-settings($value) {
-  font-feature-settings: $value;
-  -moz-font-feature-settings: $value + "=1";
-  -moz-font-feature-settings: $value;
-  -ms-font-feature-settings: $value 1;
-  -o-font-feature-settings: $value;
-  -webkit-font-feature-settings: $value;
-}
