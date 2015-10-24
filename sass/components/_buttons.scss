@@ -14,7 +14,10 @@
 
     @if $enabled {
       cursor: pointer;
-      &:hover { background-color: lighten($background-color, 5%); }
+      &:hover {
+        background-color: lighten($background-color, 5%);
+        border-color: lighten($background-color, 5%);
+      }
     } @else {
       cursor: default;
     }

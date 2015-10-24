@@ -12,8 +12,11 @@
     <style>
     .column, .columns {
       background-color: #e6e6e6;
-      height: 2em;
+      min-height: 2em;
       margin-bottom: 1rem;
+    }
+    .row .row [class*="column"]:last-child {
+      margin-bottom: 0;
     }
     .two.columns {
       background-color: #2979ff;
@@ -51,7 +54,7 @@
 </code></pre>
 
       <h3>Grid</h3>
-      Ample use a 12 columns grid system so you can to things like this:
+      <p>Ample use a 12 columns grid system so you can to things like this:<p>
       <div class="row">
         <div class="one column"></div>
         <div class="one column"></div>
