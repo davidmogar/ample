@@ -14,3 +14,7 @@
   -o-font-feature-settings: $value;
   -webkit-font-feature-settings: $value;
 }
+
+@mixin tap-highlight-color($value) {
+  -webkit-tap-highlight-color: $value;
+}

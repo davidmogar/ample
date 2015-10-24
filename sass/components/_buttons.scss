@@ -1,21 +1,23 @@
-@mixin button-variant($color, $background-color, $border-color, $enabled: true) {
+@mixin button-variant($background-color, $color: $color-white, $enabled: true) {
   background-color: $background-color;
-  border: 1px solid $border-color;
   color: $color;
 
-  @if $enabled {
+  & .icon { color: $color; }
+
+  @if($background-color == $button-default) {
+    border: 1px solid $color;
     cursor: pointer;
 
-    &:hover {
-      background-color: darken($background-color, 5%);
-    }
+    &:hover { border-color: lighten($color, 40%); }
   } @else {
-    cursor: default;
-  }
+    border: 1px solid $background-color;
 
-  & .icon {
-    color: $color;
-    margin-right: 0.5em;
+    @if $enabled {
+      cursor: pointer;
+      &:hover { background-color: lighten($background-color, 5%); }
+    } @else {
+      cursor: default;
+    }
   }
 }
 
@@ -31,15 +33,17 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  @include button-variant($button-default-color, white, #aaa);
+  & .icon {
+    margin-right: 0.5em;
+  }
 
-  -webkit-tap-highlight-color: transparent;
+  @include button-variant($button-default, $color: $color-dark-grey);
+  @include tap-highlight-color(transparent);
 }
 
-.button.disabled {
-  @include button-variant($button-disabled-color, white, #ddd, false);
-}
-
-.button.primary {
-  @include button-variant($button-primary-color, $button-primary-bg, $button-primary-bg);
-}
+.danger.button { @include button-variant($button-danger); }
+.disabled.button { @include button-variant($button-disabled, $enabled: false); }
+.info.button { @include button-variant($button-info); }
+.primary.button { @include button-variant($button-primary); }
+.success.button { @include button-variant($button-success); }
+.warning.button { @include button-variant($button-warning); }

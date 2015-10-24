@@ -33,10 +33,10 @@
   }
 
   @include clearfix;
-  &:before {
-    content: " ";
-    display: table;
-  }
+  // &:before {
+  //   content: " ";
+  //   display: table;
+  // }
 
   [class*='column'] {
     box-sizing: border-box;
@@ -46,6 +46,7 @@
   @media #{$medium-devices} {
     [class*='column'] {
       float: left;
+      margin-right: $column-margin;
       position: relative;
 
       &.one { @include column-width(1); }
@@ -74,24 +75,19 @@
       margin-right: auto !important;
     }
 
-    [class*='column'] {
-      margin-right: $column-margin;
+    &.right.aligned {
+      [class*='column'] {
+        margin-right: auto;
+        margin-left: $column-margin;
+      }
+
+      & [class*='column'] {
+        float: right;
+      }
+
+      & [class*='column']:last-of-type {
+        margin-left: auto !important;
+      }
     }
-
-
-        &.right.aligned {
-          & [class*='column'] {
-            float: right;
-          }
-
-          [class*='column'] {
-            margin-right: auto;
-            margin-left: $column-margin;
-          }
-
-          & [class*='column']:last-of-type {
-            margin-left: auto !important;
-          }
-        }
   }
 }
