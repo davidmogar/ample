@@ -2,10 +2,15 @@ pre {
   // background-color: lighten($color-light-grey, 3%);
   border: 1px solid $color-blue-grey;
   border-radius: 4px;
+  padding: 1rem;
 }
 
 code {
   border: none;
+}
+
+code > .pln:first-child {
+  display: none;
 }
 
 /* Tomorrow Theme */
