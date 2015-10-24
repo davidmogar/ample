@@ -8,13 +8,69 @@
     <meta name="author" content="David Moreno-García">
     <title>ample.css</title>
     <link rel="stylesheet" type="text/css" href="sass/ample.min.css">
+    <style>
+    .columns {
+      background-color: #e6e6e6;
+      height: 2em;
+      margin-bottom: 1rem;
+    }
+    .two.columns {
+      background-color: #2979ff;
+    }
+    </style>
   </head>
   <body>
     <div class="container">
-      <h1>ample.css</h1>
+      <h1>This is ample</h1>
       <h2>A light and responsive front-end framework</h2>
-      <a class="btn" href="#"><span class="icon icon-home"></span>This is a button</a>
-      <a class="btn primary" href="#"><span class="icon icon-home"></span>This is a button</a>
+      <a class="button" href="#"><span class="icon icon-home"></span>Default</a>
+      <a class="button disabled" href="#"><span class="icon icon-home"></span>Disabled</a>
+      <a class="button primary" href="#"><span class="icon icon-home"></span>Primary</a>
+      <div class="row">
+        <div class="twelve columns"></div>
+      </div>
+      <div class="row centered">
+        <div class="three columns"></div>
+        <div class="one columns"></div>
+        <div class="three columns"></div>
+      </div>
+      <div class="row">
+        <div class="four columns"></div>
+        <div class="two columns"></div>
+        <div class="four columns" style="background-color: transparent;">
+          <div class="row">
+            <div class="four columns"></div>
+            <div class="two columns"></div>
+            <div class="four columns"></div>
+            <div class="two columns"></div>
+          </div>
+        </div>
+        <div class="two columns"></div>
+      </div>
+      <div class="row centered">
+        <div class="three columns floated left"></div>
+        <div class="one columns"></div>
+        <div class="three columns floated right"></div>
+      </div>
+      <div class="row">
+        <div class="three columns floated left"></div>
+        <div class="three columns floated right"></div>
+      </div>
+
+      <div class="row">
+        <div class="four columns"></div>
+        <div class="four columns"></div>
+
+        <div class="seven columns"></div>
+        <div class="ten columns"></div>
+      </div>
+
+      <div class="right aligned row">
+        <div class="four columns"></div>
+        <div class="four columns"></div>
+        <div class="seven columns"></div>
+        <div class="ten columns"></div>
+      </div>
     </div>
   </body>
 </html>

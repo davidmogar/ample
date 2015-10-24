@@ -1,9 +1,16 @@
-@mixin button-variant($color, $background-color) {
-  color: $color;
+@mixin button-variant($color, $background-color, $border-color, $enabled: true) {
   background-color: $background-color;
+  border: 1px solid $border-color;
+  color: $color;
 
-  &:hover {
-    background-color: darken($background-color, 5%);
+  @if $enabled {
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($background-color, 5%);
+    }
+  } @else {
+    cursor: default;
   }
 
   & .icon {
@@ -12,25 +19,27 @@
   }
 }
 
-.btn {
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
+.button {
+  border-radius: 4px;
   display: inline-block;
   line-height: $button-line-height;
   margin: $button-margin;
   outline: none;
-  padding: 0.3em 0.5em;
+  padding: 0.8em 2em;
   text-align: center;
   text-decoration:none;
   vertical-align: middle;
   white-space: nowrap;
 
-  @include button-variant($color-black, $color-gray);
+  @include button-variant($button-default-color, white, #aaa);
 
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn.primary {
-  @include button-variant($color-white, $color-blue);
+.button.disabled {
+  @include button-variant($button-disabled-color, white, #ddd, false);
+}
+
+.button.primary {
+  @include button-variant($button-primary-color, $button-primary-bg, $button-primary-bg);
 }

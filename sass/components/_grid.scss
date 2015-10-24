@@ -1,3 +1,9 @@
+@mixin column-width($column) {
+  & {
+    width: $single-column-width * $column + $column-margin * ($column - 1);
+  }
+}
+
 .container {
   margin: 0 auto;
   padding-left: $grid-gutter-width / 2;
@@ -6,10 +12,86 @@
   @media #{$small-devices} {
     width: $container-small;
   }
+
   @media #{$medium-devices} {
     width: $container-medium;
   }
+
   @media #{$large-devices} {
     width: $container-large;
+  }
+}
+
+.row {
+  box-sizing: border-box;
+  // margin-bottom: 1rem;
+
+  &.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include clearfix;
+  &:before {
+    content: " ";
+    display: table;
+  }
+
+  [class*='column'] {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  @media #{$medium-devices} {
+    [class*='column'] {
+      float: left;
+      position: relative;
+
+      &.one { @include column-width(1); }
+      &.two { @include column-width(2); }
+      &.three { @include column-width(3); }
+      &.four { @include column-width(4); }
+      &.five { @include column-width(5); }
+      &.six { @include column-width(6); }
+      &.seven { @include column-width(7); }
+      &.eight { @include column-width(8); }
+      &.nine { @include column-width(9); }
+      &.ten { @include column-width(10); }
+      &.eleven { @include column-width(11); }
+      &.twelve { @include column-width(12); }
+
+      &.left.floated { float: left; }
+      &.right.floated { float: right; }
+    }
+
+    &.centered [class*='column'] {
+      float: none;
+      display: inline-block;
+    }
+
+    & [class*='column']:last-of-type {
+      margin-right: auto !important;
+    }
+
+    [class*='column'] {
+      margin-right: $column-margin;
+    }
+
+
+        &.right.aligned {
+          & [class*='column'] {
+            float: right;
+          }
+
+          [class*='column'] {
+            margin-right: auto;
+            margin-left: $column-margin;
+          }
+
+          & [class*='column']:last-of-type {
+            margin-left: auto !important;
+          }
+        }
   }
 }

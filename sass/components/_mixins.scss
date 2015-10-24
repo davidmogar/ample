@@ -1,3 +1,11 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin font-feature-settings($value) {
   font-feature-settings: $value;
   -moz-font-feature-settings: $value + "=1";
