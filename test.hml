@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Light front-end framework">
+    <meta name="keywords" content="ample,css,front-end,framework">
+    <meta name="author" content="David Moreno-García">
+    <title>ample.css</title>
+    <link rel="stylesheet" type="text/css" href="css/ample.min.css">
+    <script type="text/javascript" src="js/prettify/prettify.js"></script>
+    <style>
+    .column, .columns {
+      background-color: #e6e6e6;
+      min-height: 2em;
+      margin-bottom: 1rem;
+    }
+    .row .row [class*="column"]:last-child {
+      margin-bottom: 0;
+    }
+    .two.columns {
+      background-color: #2979ff;
+    }
+    </style>
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container">
+      <h1>This is just for test purposes. This is not ample final version</h1>
+      <h2>A light and responsive front-end framework</h2>
+
+      <h3>Buttons</h3>
+      <div>
+        <a class="button" href="#">Default</a>
+        <a class="primary button" href="#">Primary</a>
+        <a class="disabled button" href="#">Disabled</a>
+      </div>
+      <p>Need button states? I got you covered:</p>
+      <div>
+        <a class="info button" href="#">Info</a>
+        <a class="success button" href="#">Success</a>
+        <a class="warning button" href="#">Warning</a>
+        <a class="danger button" href="#">Danger</a>
+      </div>
+<pre class="prettyprint lang-html"><code>
+&lt;div&gt;
+  &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Default&lt;/a&gt;
+  &lt;a class=&quot;primary button&quot; href=&quot;#&quot;&gt;Primary&lt;/a&gt;
+  &lt;a class=&quot;disabled button&quot; href=&quot;#&quot;&gt;Disabled&lt;/a&gt;
+  &lt;a class=&quot;info button&quot; href=&quot;#&quot;&gt;Info&lt;/a&gt;
+  &lt;a class=&quot;success button&quot; href=&quot;#&quot;&gt;Success&lt;/a&gt;
+  &lt;a class=&quot;warning button&quot; href=&quot;#&quot;&gt;Warning&lt;/a&gt;
+  &lt;a class=&quot;danger button&quot; href=&quot;#&quot;&gt;Danger&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h3>Grid</h3>
+      <p>Ample use a 12 columns grid system so you can to things like this:<p>
+      <div class="row">
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+        <div class="one column"></div>
+      </div>
+      <div class="row">
+        <div class="three columns"></div>
+        <div class="two columns"></div>
+        <div class="seven columns"></div>
+      </div>
+      <div class="row">
+        <div class="six columns"></div>
+        <div class="six columns"></div>
+      </div>
+<pre class="prettyprint lang-html"><code>
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;seven columns&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;six columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;six columns&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <p>You need more? What about centering and nesting colums?</p>
+      <div class="row centered">
+        <div class="three columns"></div>
+        <div class="one columns"></div>
+        <div class="three columns"></div>
+      </div>
+      <div class="row">
+        <div class="four columns"></div>
+        <div class="two columns"></div>
+        <div class="four columns" style="background-color: transparent;">
+          <div class="row">
+            <div class="four columns"></div>
+            <div class="two columns"></div>
+            <div class="four columns"></div>
+            <div class="two columns"></div>
+          </div>
+        </div>
+        <div class="two columns"></div>
+      </div>
+<pre class="prettyprint lang-html"><code>
+&lt;div class=&quot;row centered&quot;&gt;
+  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;four columns&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <p>Sometimes is also useful to align things. Give it a try!</p>
+      <div class="row centered">
+        <div class="three columns floated left"></div>
+        <div class="one columns"></div>
+        <div class="three columns floated right"></div>
+      </div>
+      <div class="row">
+        <div class="three columns floated left"></div>
+        <div class="three columns floated right"></div>
+      </div>
+      <div class="row">
+        <div class="four columns"></div>
+        <div class="two columns"></div>
+        <div class="three columns"></div>
+      </div>
+      <div class="right aligned row">
+        <div class="three columns"></div>
+        <div class="two columns"></div>
+        <div class="four columns"></div>
+      </div>
+<pre class="prettyprint lang-html"><code>
+&lt;div class=&quot;row centered&quot;&gt;
+  &lt;div class=&quot;three columns floated left&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;three columns floated right&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;three columns floated left&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;three columns floated right&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;right aligned row&quot;&gt;
+&lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+  </body>
+</html>
