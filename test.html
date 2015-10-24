@@ -7,25 +7,28 @@
     <meta name="keywords" content="ample,css,front-end,framework">
     <meta name="author" content="David Moreno-García">
     <title>ample.css</title>
-    <link rel="stylesheet" type="text/css" href="css/ample.min.css">
+    <link rel="stylesheet" type="text/css" href="sass/ample.min.css">
     <script type="text/javascript" src="js/prettify/prettify.js"></script>
     <style>
     .column, .columns {
-      background-color: #e6e6e6;
-      min-height: 2em;
+      background-color: #cfd8dc;
+      border-radius: 4px;
       margin-bottom: 1rem;
+      padding: 0.6rem 0;
+      text-align: center;
     }
     .row .row [class*="column"]:last-child {
       margin-bottom: 0;
     }
     .two.columns {
-      background-color: #2979ff;
+      background-color: #00897b;
+      color: white;
     }
     </style>
   </head>
   <body onload="prettyPrint()">
     <div class="container">
-      <h1>This is just for test purposes. This is not ample final version</h1>
+      <h1>This is ample</h1>
       <h2>A light and responsive front-end framework</h2>
 
       <h3>Buttons</h3>
@@ -56,42 +59,42 @@
       <h3>Grid</h3>
       <p>Ample use a 12 columns grid system so you can to things like this:<p>
       <div class="row">
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
-        <div class="one column"></div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
+        <div class="one column">One</div>
       </div>
       <div class="row">
-        <div class="three columns"></div>
-        <div class="two columns"></div>
-        <div class="seven columns"></div>
+        <div class="three columns">Three</div>
+        <div class="two columns">Two</div>
+        <div class="seven columns">Seven</div>
       </div>
       <div class="row">
-        <div class="six columns"></div>
-        <div class="six columns"></div>
+        <div class="six columns">Six</div>
+        <div class="six columns">Six</div>
       </div>
 <pre class="prettyprint lang-html"><code>
 &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
@@ -106,22 +109,22 @@
 
       <p>You need more? What about centering and nesting colums?</p>
       <div class="row centered">
-        <div class="three columns"></div>
-        <div class="one column"></div>
-        <div class="three columns"></div>
+        <div class="three columns">Three</div>
+        <div class="one column">One</div>
+        <div class="three columns">Three</div>
       </div>
       <div class="row">
-        <div class="four columns"></div>
-        <div class="two columns"></div>
-        <div class="four columns" style="background-color: transparent;">
+        <div class="four columns">Four</div>
+        <div class="two columns">Two</div>
+        <div class="four columns no padding" style="background-color: transparent;">
           <div class="row">
-            <div class="four columns"></div>
-            <div class="two columns"></div>
-            <div class="four columns"></div>
-            <div class="two columns"></div>
+            <div class="four columns">Four</div>
+            <div class="two columns">Two</div>
+            <div class="four columns">Four</div>
+            <div class="two columns">Two</div>
           </div>
         </div>
-        <div class="two columns"></div>
+        <div class="two columns">Two</div>
       </div>
 <pre class="prettyprint lang-html"><code>
 &lt;div class=&quot;row centered&quot;&gt;
@@ -146,26 +149,28 @@
 
       <p>Sometimes is also useful to align things. Give it a try!</p>
       <div class="row centered">
-        <div class="three columns floated left"></div>
-        <div class="three columns floated right"></div>
+        <div class="three columns floated left">Three</div>
+        <div class="one column">One</div>
+        <div class="three columns floated right">Three</div>
       </div>
       <div class="row">
-        <div class="three columns floated left"></div>
-        <div class="three columns floated right"></div>
+        <div class="three columns floated left">Three</div>
+        <div class="three columns floated right">Three</div>
       </div>
       <div class="row">
-        <div class="four columns"></div>
-        <div class="two columns"></div>
-        <div class="three columns"></div>
+        <div class="four columns">Four</div>
+        <div class="two columns">Two</div>
+        <div class="three columns">Three</div>
       </div>
       <div class="right aligned row">
-        <div class="three columns"></div>
-        <div class="two columns"></div>
-        <div class="four columns"></div>
+        <div class="three columns">Three</div>
+        <div class="two columns">Two</div>
+        <div class="four columns">Four</div>
       </div>
 <pre class="prettyprint lang-html"><code>
 &lt;div class=&quot;row centered&quot;&gt;
   &lt;div class=&quot;three columns floated left&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;one columns&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;three columns floated right&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
