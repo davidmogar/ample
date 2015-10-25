@@ -1,6 +1,6 @@
 @mixin column-width($column) {
   & {
-    width: $single-column-width * $column + $column-margin * ($column - 1);
+    width: unquote($single-column-width * $column + "%");
   }
 }
 
@@ -22,76 +22,44 @@
   }
 }
 
-.row {
+.grid {
   box-sizing: border-box;
-  // margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 
   &.centered {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
   }
 
-  @include clearfix;
-  // &:before {
-  //   content: " ";
-  //   display: table;
-  // }
+  &.right.aligned {
+    justify-content: flex-end;
+  }
 
-  [class*='column'] {
+  &.space.between {
+    justify-content: space-between;
+  }
+
+  .cell {
     box-sizing: border-box;
     width: 100%;
 
-    &.no.padding {
-      padding: 0;
-    }
-  }
-
-  @media #{$medium-devices} {
-    [class*='column'] {
-      float: left;
-      margin-right: $column-margin;
-      position: relative;
-
-      &.one { @include column-width(1); }
-      &.two { @include column-width(2); }
-      &.three { @include column-width(3); }
-      &.four { @include column-width(4); }
-      &.five { @include column-width(5); }
-      &.six { @include column-width(6); }
-      &.seven { @include column-width(7); }
-      &.eight { @include column-width(8); }
-      &.nine { @include column-width(9); }
-      &.ten { @include column-width(10); }
-      &.eleven { @include column-width(11); }
-      &.twelve { @include column-width(12); }
-
-      &.left.floated { float: left; }
-      &.right.floated { float: right; }
+    &.auto.wide {
+      flex: 1;
     }
 
-    &.centered [class*='column'] {
-      float: none;
-      display: inline-block;
-    }
-
-    & [class*='column']:last-of-type {
-      margin-right: auto !important;
-    }
-
-    &.right.aligned {
-      [class*='column'] {
-        margin-right: auto;
-        margin-left: $column-margin;
-      }
-
-      & [class*='column'] {
-        float: right;
-      }
-
-      & [class*='column']:last-of-type {
-        margin-left: auto !important;
-      }
+    @media #{$medium-devices} {
+      &.one.wide { @include column-width(1); }
+      &.two.wide { @include column-width(2); }
+      &.three.wide { @include column-width(3); }
+      &.four.wide { @include column-width(4); }
+      &.five.wide { @include column-width(5); }
+      &.six.wide { @include column-width(6); }
+      &.seven.wide { @include column-width(7); }
+      &.eight.wide { @include column-width(8); }
+      &.nine.wide { @include column-width(9); }
+      &.ten.wide { @include column-width(10); }
+      &.eleven.wide { @include column-width(11); }
+      &.twelve.wide { @include column-width(12); }
     }
   }
 }

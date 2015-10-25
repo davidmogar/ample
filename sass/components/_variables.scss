@@ -38,7 +38,8 @@ $container-large: 1140px + $grid-gutter-width;
 
 $grid-max-colums: 12;
 $column-margin: 1.6%;
-$single-column-width: (100 - ($column-margin * ($grid-max-colums - 1))) / $grid-max-colums;
+$single-column-width: 100 / $grid-max-colums;
+// $single-column-width: (100 - ($column-margin * ($grid-max-colums - 1))) / $grid-max-colums;
 
 /* Media queries */
 $small-screen: 768px;

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Light front-end framework">
+    <meta name="keywords" content="ample,css,front-end,framework">
+    <meta name="author" content="David Moreno-García">
+    <title>ample.css</title>
+    <link rel="stylesheet" type="text/css" href="sass/ample.min.css">
+    <script type="text/javascript" src="js/prettify/prettify.js"></script>
+    <style>
+    .cell {
+      background-color: #cfd8dc;
+      border: 4px solid white;
+      border-radius: 4px;
+      padding: 1em;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body onload="prettyPrint()">
+    <div class="container">
+      <h1>This is ample</h1>
+      <h2>A light and responsive front-end framework</h2>
+
+      <h3>Buttons</h3>
+      <div>
+        <a class="button" href="#">Default</a>
+        <a class="primary button" href="#">Primary</a>
+        <a class="disabled button" href="#">Disabled</a>
+      </div>
+      <p>Need button states? I got you covered:</p>
+      <div>
+        <a class="info button" href="#">Info</a>
+        <a class="success button" href="#">Success</a>
+        <a class="warning button" href="#">Warning</a>
+        <a class="danger button" href="#">Danger</a>
+      </div>
+<pre class="prettyprint lang-html"><code>
+&lt;div&gt;
+  &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;Default&lt;/a&gt;
+  &lt;a class=&quot;primary button&quot; href=&quot;#&quot;&gt;Primary&lt;/a&gt;
+  &lt;a class=&quot;disabled button&quot; href=&quot;#&quot;&gt;Disabled&lt;/a&gt;
+  &lt;a class=&quot;info button&quot; href=&quot;#&quot;&gt;Info&lt;/a&gt;
+  &lt;a class=&quot;success button&quot; href=&quot;#&quot;&gt;Success&lt;/a&gt;
+  &lt;a class=&quot;warning button&quot; href=&quot;#&quot;&gt;Warning&lt;/a&gt;
+  &lt;a class=&quot;danger button&quot; href=&quot;#&quot;&gt;Danger&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+      <h3>Grid</h3>
+      <p>Ample use a 12 cell grid system so you can do things like this:<p>
+      <div class="grid">
+        <div class="two wide cell">Two</div>
+        <div class="four wide cell">Four</div>
+        <div class="six wide cell">Six</div>
+      </div>
+      <div class="grid">
+        <div class="five wide cell">Two</div>
+        <div class="six wide cell">Four</div>
+        <div class="one wide cell">Six</div>
+      </div>
+      <div class="grid">
+        <div class="twelve wide cell">Twelve</div>
+      </div>
+      <p>Tired of specify cell sizes? Go auto:</p>
+      <div class="grid">
+        <div class="auto wide cell">Auto</div>
+        <div class="auto wide cell">Auto</div>
+        <div class="auto wide cell">Auto</div>
+      </div>
+      <div class="grid">
+        <div class="one wide cell">One</div>
+        <div class="auto wide cell">Auto</div>
+        <div class="one wide cell">One</div>
+      </div>
+      <div class="grid">
+        <div class="auto wide cell">Auto</div>
+        <div class="three wide cell">Three</div>
+        <div class="auto wide cell">Auto</div>
+      </div>
+      <p>Need to center things? No prob. I have some different grids for you:</p>
+      <div class="grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
+      </div>
+      <div class="right aligned grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
+      </div>
+      <div class="centered grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
+      </div>
+      <div class="space between grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
+      </div>
+    </div>
+  </body>
+</html>
