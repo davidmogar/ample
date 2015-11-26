@@ -10,19 +10,12 @@
     <link rel="stylesheet" type="text/css" href="sass/ample.min.css">
     <script type="text/javascript" src="js/prettify/prettify.js"></script>
     <style>
-    .column, .columns {
+    .cell {
       background-color: #cfd8dc;
+      border: 4px solid white;
       border-radius: 4px;
-      margin-bottom: 1rem;
-      padding: 0.6rem 0;
+      padding: 1em;
       text-align: center;
-    }
-    .row .row [class*="column"]:last-child {
-      margin-bottom: 0;
-    }
-    .two.columns {
-      background-color: #00897b;
-      color: white;
     }
     </style>
   </head>
@@ -57,135 +50,111 @@
 </code></pre>
 
       <h3>Grid</h3>
-      <p>Ample use a 12 columns grid system so you can to things like this:<p>
-      <div class="row">
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
-        <div class="one column">One</div>
+      <p>Ample use a 12 cell grid system so you can do things like this:<p>
+      <div class="grid">
+        <div class="two wide cell">Two</div>
+        <div class="four wide cell">Four</div>
+        <div class="six wide cell">Six</div>
       </div>
-      <div class="row">
-        <div class="three columns">Three</div>
-        <div class="two columns">Two</div>
-        <div class="seven columns">Seven</div>
+      <div class="grid">
+        <div class="five wide cell">Two</div>
+        <div class="six wide cell">Four</div>
+        <div class="one wide cell">One</div>
       </div>
-      <div class="row">
-        <div class="six columns">Six</div>
-        <div class="six columns">Six</div>
+      <div class="grid">
+        <div class="twelve wide cell">Twelve</div>
       </div>
 <pre class="prettyprint lang-html"><code>
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;One&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;two wide cell&quot;&gt;Two&lt;/div&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
+  &lt;div class=&quot;six wide cell&quot;&gt;Six&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;seven columns&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;five wide cell&quot;&gt;Two&lt;/div&gt;
+  &lt;div class=&quot;six wide cell&quot;&gt;Four&lt;/div&gt;
+  &lt;div class=&quot;one wide cell&quot;&gt;One&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;six columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;six columns&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;twelve wide cell&quot;&gt;Twelve&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-      <p>You need more? What about centering and nesting colums?</p>
-      <div class="row centered">
-        <div class="three columns">Three</div>
-        <div class="one column">One</div>
-        <div class="three columns">Three</div>
+      <p>Tired of specify cell sizes? Go auto:</p>
+      <div class="grid">
+        <div class="auto wide cell">Auto</div>
+        <div class="auto wide cell">Auto</div>
+        <div class="auto wide cell">Auto</div>
       </div>
-      <div class="row">
-        <div class="four columns">Four</div>
-        <div class="two columns">Two</div>
-        <div class="four columns no padding" style="background-color: transparent;">
-          <div class="row">
-            <div class="four columns">Four</div>
-            <div class="two columns">Two</div>
-            <div class="four columns">Four</div>
-            <div class="two columns">Two</div>
-          </div>
-        </div>
-        <div class="two columns">Two</div>
+      <div class="grid">
+        <div class="one wide cell">One</div>
+        <div class="auto wide cell">Auto</div>
+        <div class="one wide cell">One</div>
+      </div>
+      <div class="grid">
+        <div class="auto wide cell">Auto</div>
+        <div class="three wide cell">Three</div>
+        <div class="auto wide cell">Auto</div>
       </div>
 <pre class="prettyprint lang-html"><code>
-&lt;div class=&quot;row centered&quot;&gt;
-  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one column&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;auto wide cell&quot;&gt;Auto&lt;/div&gt;
+  &lt;div class=&quot;auto wide cell&quot;&gt;Auto&lt;/div&gt;
+  &lt;div class=&quot;auto wide cell&quot;&gt;Auto&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;four columns&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-      &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;one wide cell&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;auto wide cell&quot;&gt;Auto&lt;/div&gt;
+  &lt;div class=&quot;one wide cell&quot;&gt;One&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;auto wide cell&quot;&gt;Auto&lt;/div&gt;
+  &lt;div class=&quot;three wide cell&quot;&gt;Three&lt;/div&gt;
+  &lt;div class=&quot;auto wide cell&quot;&gt;Auto&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-      <p>Sometimes is also useful to align things. Give it a try!</p>
-      <div class="row centered">
-        <div class="three columns floated left">Three</div>
-        <div class="one column">One</div>
-        <div class="three columns floated right">Three</div>
+      <p>Need to center things? No prob. Ample has some different grids for you:</p>
+      <div class="grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
       </div>
-      <div class="row">
-        <div class="three columns floated left">Three</div>
-        <div class="three columns floated right">Three</div>
+      <div class="right aligned grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
       </div>
-      <div class="row">
-        <div class="four columns">Four</div>
-        <div class="two columns">Two</div>
-        <div class="three columns">Three</div>
+      <div class="centered grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
       </div>
-      <div class="right aligned row">
-        <div class="three columns">Three</div>
-        <div class="two columns">Two</div>
-        <div class="four columns">Four</div>
+      <div class="space between grid">
+        <div class="four wide cell">Four</div>
+        <div class="one wide cell">One</div>
+        <div class="four wide cell">Four</div>
       </div>
 <pre class="prettyprint lang-html"><code>
-&lt;div class=&quot;row centered&quot;&gt;
-  &lt;div class=&quot;three columns floated left&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;one columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;three columns floated right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
+  &lt;div class=&quot;one wide cell&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;three columns floated left&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;three columns floated right&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;right aligned grid&quot;&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
+  &lt;div class=&quot;one wide cell&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;centered grid&quot;&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
+  &lt;div class=&quot;one wide cell&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;right aligned row&quot;&gt;
-&lt;div class=&quot;three columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;two columns&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;four columns&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;space between grid&quot;&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
+  &lt;div class=&quot;one wide cell&quot;&gt;One&lt;/div&gt;
+  &lt;div class=&quot;four wide cell&quot;&gt;Four&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
