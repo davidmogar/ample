@@ -49,3 +49,12 @@ $large-screen: 1200px;
 $small-devices: "only screen and (min-width: #{$small-screen})";
 $medium-devices: "only screen and (min-width: #{$medium-screen})";
 $large-devices: "only screen and (min-width: #{$large-screen})";
+
+/* Typography */
+$h1-fontsize: 3.6rem;
+$h2-fontsize: 3.1rem;
+$h3-fontsize: 2.6rem;
+$h4-fontsize: 2.1rem;
+$h5-fontsize: 1.6rem;
+$h6-fontsize: 1.1rem;
+$heading-margin: 0 0 1.6rem;
